@@ -16,12 +16,14 @@ main {
 .box-choice-numbers {
     display: flex;
     max-width: 350px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
+  	margin-left: auto;
+  	margin-right: auto;
 }
 .box-choice-numbers > span {
     padding: 10px;
     border-radius: 40px;
-    background-color: #307b07;
+    background-color: #001c33;
     width: 40px;
     height: 40px;
     color: white;
@@ -29,15 +31,31 @@ main {
     align-items: center;
     justify-content: center;
     margin: 5px;
+    color: #f5d67b;
+    
 }
 
 .selected {
-    color: white;
-    background-color: black;
-    border-radius: 40px;
+	color: white;
+	border-radius: 40px;
     padding: 10px;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+  	-moz-animation: glow 1s ease-in-out infinite alternate;
+  	animation: glow 1s ease-in-out infinite alternate;
 }
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 4px #40ff00, 0 0 6px #40ff00, 0 0 8px #40ff00, 0 0 10px #40ff00, 0 0 12px #40ff00, 0 0 14px #40ff00, 0 0 16px #40ff00;
+  }
+  to {
+    text-shadow: 0 0 2px #40ff00, 0 0 3px #40ff00, 0 0 4px #40ff00, 0 0 5px #40ff00, 0 0 6px #40ff00, 0 0 7px #40ff00, 0 0 8px #40ff00;
+  }
+}
+
+
 .btn-generate {
+	margin-top: 25px;
     background-color: #307b07;
     padding: 10px;
     border-radius: 10px;
@@ -59,4 +77,10 @@ main {
 .btn-generate:hover {
     background-color: #205706;
     transition: 1.5ms;
+}
+
+
+.generatednumbers{
+	margin-top: 25px;
+	height: 80px;	
 }
